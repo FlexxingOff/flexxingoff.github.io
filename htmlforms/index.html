@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css.css">
+	<title> JS FORM</title>
+	<script type="text/javascript">
+		function check() {
+			if(document.getElementById("favmovie").value.length!=10) {
+				document.getElementById("favmovie").innerHTML="Enter 10 digits";
+			}
+		}
+		function myfunc() {
+			alert("Hello this is a form!");
+		}
+		function as(){setTimeout(function(){document.body.style.backgroundColor="#"+Math.round(Math.random()*16777215).toString(16);},5000);};
+		function allfunc() {
+			check();
+			myfunc();
+			as();
+		}
+		function validateForm() {
+  var x = document.forms["myForm"]["favmovie"].value;
+  if (x == "") {
+    alert("Favorite must be filled out");
+    return false;
+  }
+}
+	</script>
+</head>
+<body onload="allfunc()">
+	
+<h2>HTML Forms</h2>
+
+<form  name="myForm" onsubmit="return validateForm()" action="https://www.wikipedia.org">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Enter your first  name" required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+  <label for="address">Address :</label><br>
+  <input type="text" id="address" name="address"  placeholder="Enter your address"><br>
+  <label for="favmovie">Favorite Movie:</label><br>
+  <input type="text" id="favmovie" name="fname" placeholder="Enter your favorite movie"><br>
+  <label for="favsinger">Singer :</label><br>
+  <input type="text" id="fname" name="fname" value="" placeholder="Enter your favorite singer"><br>
+  <label>Personal Info</label><br>
+  <input type="password"> <br>
+  <input type="submit" value="Submit">
+</form> 
+
+<h1>Saample Text</h1>
+<p class="sample" >Lorem <span style="background-color: red;">Ipsum</span> is simply dummy text of the printing and <span style="font-weight: bold;">typesetting</span> industry. Lorem Ipsum has been the industry's standard dummy text ever since the <span style="text-decoration: underline;">1500s</span>, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+</body>
+</html>
